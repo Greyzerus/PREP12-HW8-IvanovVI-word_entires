@@ -27,6 +27,7 @@ int main(int argc, char* argv[]) {
                       <<" : " << ex.what() << std::endl;
             continue;
         }
+    }
     std::cout << entries << std::endl;
     return 0;
 }

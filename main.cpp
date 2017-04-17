@@ -21,10 +21,10 @@ int main(int argc, char* argv[]) {
     lexical_word_entries entries (argv[1]);
     for (int i=2; i<argc; i++) {
         try {
-            entries.process (argv[i]);
+            entries.process(argv[i]);
         } catch (std::runtime_error &ex) {
             std::cerr << "Error with file " << argv[i]
-                      <<" : " << ex.what() << std::endl;
+                      << " : " << ex.what() << std::endl;
             continue;
         }
     }

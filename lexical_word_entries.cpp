@@ -19,15 +19,28 @@ int lexical_word_entries::process (const std::string &filename) {
     /*error processing?*/
     std::string buf;
     while (infile) {
-        infile >> buf;
+        std::getline(infile, buf, )
         //TODO   punct skipping (BOOST?)
+        //TODO getline with delim's!
+        //TODO there is only one awailable :(
+        //TODO BOOST!
+        /* #include <boost/algorithm/string.hpp>
+    std::string inputString("One!Two,Three:Four");
+    std::string delimiters("|,:");
+    std::vector<std::string> parts;
+    boost::split(parts, inputString, boost::is_any_of(delimiters));*/
+
+        /*getting delimiters:
+         * while (...)
+         *  if (isgraph but not isalnum)
+         *      delimiters += char;.*/
 
     }
 }
 
 friend std::ostream &operator<<(std::ostream &os, const lexical_word_entries &entries) {
     os << "There is: " << std::flush;
-    for (auto i : entries) {
+    for (auto i : entries) {        //TODO
         os << i.second << " in " << i.first <<std::endl;
     }
     return os;

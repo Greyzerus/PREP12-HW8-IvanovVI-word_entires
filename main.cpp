@@ -1,5 +1,3 @@
-#include <iostream>
-#include <fstream>
 #include "lexical_word_entries.hpp"
 
 
@@ -28,6 +26,7 @@ int main(int argc, char* argv[]) {
             continue;
         }
     }
-    std::cout << entries << std::endl;
+    std::cout << "Entries mean in " << entries.get_entries_count()
+              << " files is: " << entries.get_entries_mean() << std::endl;
     return 0;
 }

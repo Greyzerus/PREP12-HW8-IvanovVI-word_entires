@@ -16,9 +16,9 @@ int lexical_word_entries::process (const std::string &filename) {
     infile.imbue(puncts_as_spaces);
     std::string buf;
     uint count = 0;
-    while (infile.good()) {//
+    while (infile.good()) { //TODO troubles
         infile >> buf;
-        if (buf.find(word) != std::string::npos && buf.size()==word.size())
+        if (buf.size()==word.size() && buf.find(word) != std::string::npos )
             count++;
     }
     entries.push_back(std::pair <std::string ,int>(filename, count));

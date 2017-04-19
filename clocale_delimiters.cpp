@@ -11,7 +11,7 @@ clocale_delimiters::clocale_delimiters (size_t refs)
 {
     std::copy_n(classic_table(), table_size, locale_delimiters);
     for (size_t i = 0; i < table_size; i++) {
-        if (ispunct(locale_delimiters[i])) {
+        if (ispunct(static_cast<char>(i))) {
             locale_delimiters[i] = (mask)space;
         }
     }

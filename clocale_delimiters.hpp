@@ -16,7 +16,7 @@ class clocale_delimiters : public std::ctype<char>
 {
     mask locale_delimiters[table_size];
 public:
-    clocale_delimiters(size_t refs = 0); //TODO read
+    clocale_delimiters(size_t refs = 0);
 };
 
 

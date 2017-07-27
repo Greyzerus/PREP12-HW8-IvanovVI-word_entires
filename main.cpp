@@ -13,7 +13,7 @@
 
 int main(int argc, char* argv[]) {
     if (argc <= 2) {
-        std::cout << "Enter word for searching and filenames as argues." << std::endl;
+        std::cout << "Enter word for searching and filename as args." << std::endl;
         return -1;
     }
     lexical_word_entries entries (argv[1]);
